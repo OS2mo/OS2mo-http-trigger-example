@@ -47,10 +47,10 @@ def triggers():
     "/triggers/ou/edit",
     summary="Print that an organizational unit has been edited",
 )
-async def triggers_ou_create(payload: MOTriggerPayload):
+async def triggers_ou_edit(payload: MOTriggerPayload):
     """Fired when an OU has been created."""
     logger = get_logger()
-    logger.info("triggers_ou_create", payload=payload.json())
+    logger.info("triggers_ou_edit", payload=payload.json())
     return {"configured_value": get_settings().configured_value}
 
 
