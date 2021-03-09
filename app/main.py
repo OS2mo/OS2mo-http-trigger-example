@@ -45,7 +45,9 @@ def triggers():
 
 @app.post(
     "/triggers/ou/edit",
-    summary="Print that an organizational unit has been edited",
+    tags=["Trigger API"],
+    summary="Log that an organizational unit and print settings value",
+    response_model=Dict[str, str],
 )
 async def triggers_ou_edit(payload: MOTriggerPayload):
     """Fired when an OU has been created."""
