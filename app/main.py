@@ -5,7 +5,7 @@
 import sys
 
 sys.path.insert(0, "/")
-from typing import List, Dict
+from typing import Dict, List
 
 from fastapi import FastAPI
 from os2mo_http_trigger_protocol import (
